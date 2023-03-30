@@ -1,5 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Welcome } from './src/screens/Welcome';
 
 import {
   useFonts,
@@ -8,7 +7,6 @@ import {
   Overpass_600SemiBold,
   Overpass_700Bold,
 } from "@expo-google-fonts/overpass";
-import { Home } from './src/screens/Home';
 
 
 export default function App() {
@@ -24,6 +22,6 @@ export default function App() {
   }
 
   return (
-  <Home />
+  <Welcome />
   );
 }
