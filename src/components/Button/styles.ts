@@ -9,6 +9,7 @@ export const Container = styled.View`
 	border-radius: 18px;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 54px;
 `;
 
 export const Title = styled.Text`

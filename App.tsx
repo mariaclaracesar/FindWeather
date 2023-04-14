@@ -1,4 +1,5 @@
 import { Welcome } from './src/screens/Welcome';
+import { StatusBar } from 'expo-status-bar';
 
 import {
   useFonts,
@@ -22,6 +23,9 @@ export default function App() {
   }
 
   return (
-  <Welcome />
+    <>
+    <Welcome />
+    <StatusBar style='light'/>
+    </>
   );
 }

@@ -3,12 +3,14 @@ import theme from '../../theme';
 
 export const Container = styled.View`
 	flex: 1;
-	background-color: #1B1D22;
+	background-color: ${theme.colors.dark};
 	justify-content: center;
 	align-items: center;
 `;
 
-export const ImageContainer = styled.View``
+export const ImageContainer = styled.View`
+	margin-top: 113px;
+`
 
 export const TextView = styled.View`
 	margin-top: 57px;
@@ -17,10 +19,19 @@ export const TextView = styled.View`
 	margin-bottom: 74px;
 `;
 
+export const TextBold = styled.Text`
+	color: ${theme.colors.gray200};
+	font-family: ${theme.fontFamily.OverpassSemiBold};
+`;
+
+
 export const Title = styled.Text`
 	font-size: ${theme.fontSize.xxl33}px;
 	color: ${theme.colors.white};
 	font-family: ${theme.fontFamily.OverpassSemiBold};
+	display: flex;
+	align-items: center;
+	text-align: center;
 `;
 
 export const TitleDescription = styled.Text`

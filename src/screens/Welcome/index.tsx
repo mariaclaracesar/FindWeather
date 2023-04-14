@@ -8,7 +8,8 @@ import {
 	Title, 
 	TitleDescription,
 	TextView,
-	ImageContainer
+	ImageContainer,
+	TextBold
 } from './styles'
 
 export function Welcome(){
@@ -19,11 +20,10 @@ export function Welcome(){
 			</ImageContainer>
 
 			<TextView>
-				<Title>Descubra o clima na sua cidade
-				</Title>
+				<Title>Descubra o Clima {`\n`} na sua cidade</Title>
 
 				<TitleDescription>	
-					Com o FindWeather nunca ficou tão fácil ter a previsão do tempo na palma da sua mão 
+					Com o <TextBold>FindWeather</TextBold> nunca {`\n`} ficou tão fácil ter a previsão do {`\n`} tempo na palma da sua mão 
 				</TitleDescription>
 			</TextView>
 
