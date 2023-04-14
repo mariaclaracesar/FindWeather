@@ -1,7 +1,8 @@
-import styled from 'styled-components'
+import { TouchableOpacity } from 'react-native';
+import styled from 'styled-components/native'
 import theme from '../../theme';
 
-export const Container = styled.View`
+export const Container = styled(TouchableOpacity)`
 	width: 328px;
 	height: 54px;
 	background-color: ${theme.colors.dark300};
@@ -11,6 +12,7 @@ export const Container = styled.View`
 	align-items: center;
 	margin-bottom: 54px;
 `;
+
 
 export const Title = styled.Text`
 	color: ${theme.colors.white};
