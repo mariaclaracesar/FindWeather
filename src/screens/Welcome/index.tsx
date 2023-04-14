@@ -1,17 +1,9 @@
-import { useNavigation } from "@react-navigation/native";
 import { Image } from "react-native";
 import CloudPng from '../../assets/cloud.png';
 
 import { Button } from "../../components/Button";
 
-import {	
-	Container,
-	Title, 
-	TitleDescription,
-	TextView,
-	ImageContainer,
-	TextBold
-} from './styles'
+import * as S from './styles'
 
 export function Welcome({ navigation }){
 
@@ -20,23 +12,23 @@ export function Welcome({ navigation }){
 }
 
   return(
-		<Container>
-			<ImageContainer>
+		<S.Container>
+			<S.ImageContainer>
 				<Image source={CloudPng}/>
-			</ImageContainer>
+			</S.ImageContainer>
 
-			<TextView>
-			<Title>Descubra o Clima {`\n`} na sua cidade</Title>
+			<S.TextView>
+			<S.Title>Descubra o Clima {`\n`} na sua cidade</S.Title>
 
-			<TitleDescription>	
-				Com o <TextBold>FindWeather</TextBold> nunca {`\n`} ficou tão fácil ter a previsão do {`\n`} tempo na palma da sua mão 
-			</TitleDescription>
-		</TextView>
+			<S.TitleDescription>	
+				Com o <S.TextBold>FindWeather</S.TextBold> nunca {`\n`} ficou tão fácil ter a previsão do {`\n`} tempo na palma da sua mão 
+			</S.TitleDescription>
+		</S.TextView>
 
 		<Button
 			text="Iniciar"
 			onPress={handleClickIncial}
 		/>
-		</Container>
+		</S.Container>
 	)
 }

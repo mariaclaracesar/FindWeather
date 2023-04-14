@@ -1,24 +1,22 @@
+import * as S from './styles'
+
 import { Image } from "react-native";
-import CloudPng from '../../assets/cloud.png';
 
-import { Button } from "../../components/Button";
-
-import {	
-	Container,
-	ImageContainer,
-} from './styles'
+import ClimatePng from '../../assets/climate.png';
 
 export function Home(){
 
   return(
-		<Container>
-			<ImageContainer>
-				<Image source={CloudPng}/>
-			</ImageContainer>
+		<S.Container>
+			<S.Header>
+				<S.Title>Find<S.BoldText>Weather</S.BoldText></S.Title>
+			</S.Header>
 
-		<Button
-			title="OLa"
-		/>
-		</Container>
+			<S.ImageContainer>
+				<Image source={ClimatePng}/>
+			</S.ImageContainer>
+
+			<S.TitleSelect>Selecione aqui um local e{`\n`}encontre o clima em tempo real</S.TitleSelect>
+		</S.Container>
 	)
 }
