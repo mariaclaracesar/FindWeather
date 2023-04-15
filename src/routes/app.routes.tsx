@@ -1,21 +1,40 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Home } from '../screens/Home';
-import { Welcome } from '../screens/Welcome';
+import React from "react";
+import { Platform } from 'react-native'
 
-const { Navigator, Screen } = createNativeStackNavigator();
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { useTheme } from "@react-navigation/native";
 
-export function AppRoutes() {
+import { Octicons, Entypo } from '@expo/vector-icons';
+import theme from "../theme";
+
+import { Home } from "../screens/Home";
+
+const { Navigator, Screen } = createBottomTabNavigator();
+
+export function AppRoutes(){
+
   return (
-    <Navigator screenOptions={{ headerShown: false }}>
-      <Screen 
-        name='Home'
-        component={Home}
-      />
-      
-      <Screen 
-        name='Welcome'
-        component={Welcome}
-      />
+    <Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor:theme.colors.dark,
+        tabBarInactiveTintColor: theme.colors.dark,
+        tabBarLabelPosition: 'beside-icon',
+        tabBarStyle: {
+          height: 60,
+          paddingVertical: Platform.OS === 'ios' ? 20 : 0,
+        }
+      }}
+    >
+    
+    <Screen 
+      name="Home"
+      component={Home}
+      // options={{
+      //   tabBarIcon: (({ size, color}) =>
+      //   )
+      // }}
+    />
 
     </Navigator>
   )
